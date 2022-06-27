@@ -1,5 +1,23 @@
 package com.company;
 
 public class Tumbler {
-   public static volatile boolean tumbleruserbox;
+    volatile boolean tumbler;
+
+//    public Tumbler (boolean tumbler){
+//        this.tumbler=tumbler;
+//    }
+
+public Tumbler() {
+
+   }
+
+    public  boolean getTumbler(){
+        return tumbler;
+    }
+
+    public void setTumbler(boolean tumbler) {
+        this.tumbler = tumbler;
+    }
+
+
 }

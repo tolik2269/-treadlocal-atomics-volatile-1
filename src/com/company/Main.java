@@ -2,12 +2,15 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
-        User user= new User();
-        Box box =new Box();
 
-        User userThread=new User();
-        Box gameThread=new Box();
+    public static void main(String[] args) throws InterruptedException {
+        Tumbler tumbler=new Tumbler();
+
+        User user= new User(tumbler);
+        Box box =new Box(tumbler);
+
+        User userThread=new User(tumbler);
+        Box gameThread=new Box(tumbler);
         userThread.start();
         gameThread.start();
 
